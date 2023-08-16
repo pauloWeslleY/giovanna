@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #333;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#aceitarBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+#recusarBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  transform: rotate(-45deg);
+  animation: heartbeat 1.5s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 52px;
+  height: 80px;
+  border-radius: 50px 50px 0 0;
+  background: red;
+}
+
+.heart::before {
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
